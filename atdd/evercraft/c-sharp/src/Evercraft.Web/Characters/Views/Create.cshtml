@@ -1,0 +1,10 @@
+@{
+    ViewBag.Title = "Create Character";
+    Layout = "_Layout";
+}
+
+
+@using(Html.BeginForm("Create", "Characters", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+}

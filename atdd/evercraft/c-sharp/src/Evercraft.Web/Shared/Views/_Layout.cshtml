@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        @{
+            if (ViewData.ContainsKey("title"))
+            {
+                @Html.Raw("Evercraft")
+            }
+            else
+            {
+                @Html.Raw($"Evercraft - {ViewData["title"]}")
+            }
+        }
+    </title>
+</head>
+<body>
+@RenderBody()
+@await RenderSectionAsync("scripts", false)
+</body>
+</html>

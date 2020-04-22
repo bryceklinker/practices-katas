@@ -1,0 +1,25 @@
+version: "3"
+services:
+  evercraft_web:
+    build: ../../src/Evercraft.Web
+    image: evercraft_web
+    environment:
+      DB_CONNECTION_STRING: "Host=evercraft_db;User ID=evercraft;Database=evercraft;Port=5432;Password=Gx06Q!*RyJd1Ud&3Qzzo;"
+      ASPNETCORE_URLS: "https://+;http://+"
+      ASPNETCORE_HTTPS_PORT: "5001"
+      ASPNETCORE_Kestrel__Certificates__Default__Password: "evercraft"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: "/https/evercraft_cert.pfx"
+    ports:
+      - "5000:80"
+      - "5001:443"
+    links:
+      - evercraft_db
+    volumes:
+    - ~/.aspnet/https:/https
+  evercraft_db:
+    image: "postgres:12.2"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "Gx06Q!*RyJd1Ud&3Qzzo"
+      POSTGRES_USER: "evercraft"

@@ -1,0 +1,10 @@
+bin/
+obj/
+**/*.user
+TestResults/
+**/*.feature.cs
+node_modules/
+dist/
+videos/
+screenshots/
+.idea/

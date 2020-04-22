@@ -1,0 +1,24 @@
+{
+  "name": "evercraft-features",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "generate:cert": "dotnet dev-certs https -ep ~/.aspnet/https/evercraft_cert.pfx -p evercraft && dotnet dev-certs https --trust",
+    "clean:web": "rimraf ../../src/Evercraft.Web/dist",
+    "build:web": "yarn clean:web && cd ../../src/Evercraft.Web && dotnet publish -c Relese -o ./dist",
+    "pretest": "yarn build:web && docker-compose up -d --build",
+    "test": "cypress run",
+    "test:dev": "yarn pretest && cypress open",
+    "posttest:dev": "docker-compose down",
+    "posttest": "docker-compose down"
+  },
+  "devDependencies": {
+    "cypress": "4.4.1",
+    "cypress-cucumber-preprocessor": "2.3.1",
+    "rimraf": "3.0.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
