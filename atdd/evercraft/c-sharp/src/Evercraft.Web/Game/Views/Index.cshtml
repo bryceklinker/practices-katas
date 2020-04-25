@@ -1,6 +1,12 @@
+@model Evercraft.Web.Game.ViewModels.IndexViewModel
+
 @{
     Layout = "_Layout";
 }
-<div>
-    
-</div>
+
+@foreach (var character in Model.Characters)
+{
+    <div data-testid="character">
+        <span data-testid="character-name">@character.Name</span>
+    </div>
+}

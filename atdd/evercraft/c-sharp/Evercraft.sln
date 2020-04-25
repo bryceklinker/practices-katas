@@ -17,6 +17,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{46520EB4
 ProjectSection(SolutionItems) = preProject
 	original-source.md = original-source.md
 	readme.md = readme.md
+	help.md = help.md
+EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{B3ECDED4-992A-4F2B-85F9-91079884601A}"
+ProjectSection(SolutionItems) = preProject
+	scripts\create-migration.sh = scripts\create-migration.sh
+	scripts\remove-last-migration.sh = scripts\remove-last-migration.sh
+	scripts\verify.sh = scripts\verify.sh
 EndProjectSection
 EndProject
 Global

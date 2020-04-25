@@ -1,6 +1,6 @@
 namespace Evercraft.Web.Characters.ViewModels
 {
-    public class CreateCharacterViewModel
+    public class CharacterViewModel
     {
         public string Name { get; set; }
     }

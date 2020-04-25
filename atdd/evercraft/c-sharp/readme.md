@@ -9,6 +9,10 @@ May all your rolls be 20s.
 
 Guy Royse [@guyroyse](https://twitter.com/#!/guyroyse) and George Walters II [@walterg2](https://twitter.com/#!/walterg2)
 
+# Help
+
+If you are unfamiliar with .NET Core there is some help provided [here](./help.md)
+
 # Requirements
 
 ## Iteration 1 - Core
